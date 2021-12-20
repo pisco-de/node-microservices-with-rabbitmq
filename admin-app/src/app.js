@@ -43,7 +43,7 @@ var product_1 = require("./entity/product");
 var amqp = require("amqplib/callback_api");
 (0, typeorm_1.createConnection)().then(function (db) {
     var productRepository = db.getRepository(product_1.Product);
-    amqp.connect('cloudamqp_url', function (error0, connection) {
+    amqp.connect('put_here_cloudamqp_url', function (error0, connection) {
         if (error0) {
             throw error0;
         }
