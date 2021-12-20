@@ -44,7 +44,7 @@ var amqp = require("amqplib/callback_api");
 var axios_1 = require("axios");
 (0, typeorm_1.createConnection)().then(function (db) {
     var productRepository = db.getMongoRepository(product_1.Product);
-    amqp.connect('amqps://dhpmdfjr:0gpRNrgaZdO0hJYnutMMA5DEUedXIsjO@jellyfish.rmq.cloudamqp.com/dhpmdfjr', function (error0, connection) {
+    amqp.connect('cloudamqp_url', function (error0, connection) {
         if (error0) {
             throw error0;
         }
